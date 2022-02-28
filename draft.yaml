@@ -1,0 +1,9 @@
+models:
+  Products/product:
+    name: string:257
+    category: text
+    price: numeric
+    stock: integer
+controllers:
+  product:
+    resource

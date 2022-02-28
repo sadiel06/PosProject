@@ -248,7 +248,7 @@ return [
         ],
         [
             'text'        => 'products',
-            'route'         => 'admin.products.index',
+            'route'         => 'admin.product.index',
             'icon'        => 'fas fa-solid fa-cubes',
             'label_color' => 'success',
         ],
@@ -390,7 +390,7 @@ return [
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
