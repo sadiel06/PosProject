@@ -8,6 +8,9 @@
 
 @section('content')
     <div class="card">
+        <div class="card-header">
+            <a href="{{route('admin.product.create')}}" class="btn btn-primary">New product</a>
+        </div>
         <div class="card-body">
             <table class="table table-striped" >
                 <thead>
@@ -28,8 +31,14 @@
                             <td>{{$product->category}}</td>
                             <td>{{$product->price}}</td>
                             <td>{{$product->stock}}
-                            <td><a href="{{route('admin.product.edit',$product)}}" class="btn btn-outline-primary btn-sm">Edit</a> </td>
-                            <td><a href="{{--route('admin.product.destroy')--}}" class="btn btn-outline-danger btn-sm">Delete</a> </td>
+                            <td><a href="{{route('admin.product.edit',$product)}}" class="btn btn-warning btn-sm">Edit</a> </td>
+                            <td>
+                                <form action="{{route('admin.product.destroy',$product)}}" method="POST">
+                                    @method('delete')
+                                    @csrf
+                                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                                </form>
+                            </td>
                         </tr>
 
                     @endforeach
