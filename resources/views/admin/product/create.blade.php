@@ -7,13 +7,35 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
-@stop
+<div class="card">
+    <div class="card-body">
+    <div class="form-group">
+        {!! Form::open(['route'=>'product.store']) !!}
+            <div class="form-group">
+                {!! Form::label('name','Name') !!}
+                {!! Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Name of product']) !!}
+            </div>
+        <div class="form-group">
+                {!! Form::label('category','Category') !!}
+                {!! Form::text('category',null,['class'=>'form-control','placeholder'=>'Category of product']) !!}
+            </div>
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
+            <div class="form-group">
+                {!! Form::label('price','Price') !!}
+                {!! Form::number('name',null,['class'=>'form-control','placeholder'=>'Price of product']) !!}
+            </div>
 
-@section('js')
-    <script> console.log('Hi!'); </script>
+            <div class="form-group">
+                {!! Form::label('stock','Stock') !!}
+                {!! Form::number('stock',null,['class'=>'form-control','placeholder'=>'Stock of product']) !!}
+            </div>
+
+            {!! Form::submit('Save product',['class'=>'btn btn-primary']) !!}
+
+        {!! Form::close() !!}
+    </div>
+    </div>
+</div>
+
+
 @stop
