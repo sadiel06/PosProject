@@ -7,19 +7,48 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+
+                {!! Form::model($product,['route'=>['admin.product.update',$product],'method'=>'put']) !!}
+
+                <div class="form-group">
+                    {!! Form::label('name','Name') !!}
+                    {!! Form::text('name',null,['class'=>'form-control', 'placeholder'=>'Name of product']) !!}
+                    @error('name')
+                        <span class="text-danger">{{$message}}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('category','Category') !!}
+                    {!! Form::text('category',null,['class'=>'form-control','placeholder'=>'Category of product']) !!}
+                    @error('category')
+                        <span class="text-danger">{{$message}}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('price','Price') !!}
+                    {!! Form::number('price',null,['class'=>'form-control','placeholder'=>'Price of product']) !!}
+                    @error('price')
+                        <span class="text-danger">{{$message}}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('stock','Stock') !!}
+                    {!! Form::number('stock',null,['class'=>'form-control','placeholder'=>'Stock of product']) !!}
+                    @error('stock')
+                        <span class="text-danger">{{$message}}</span>
+                    @enderror
+                </div>
+
+                {!! Form::submit('Update product',['class'=>'btn btn-primary']) !!}
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+
 @stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop{{--
-    @extends('layouts.app')
-
-    @section('content')
-        product.edit template
-    @endsection
---}}
