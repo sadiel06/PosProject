@@ -29,11 +29,12 @@ class productController extends Controller
     public function store(productStoreRequest $request)
     {
 //        dd($request->all());
-//        $product = Product::create($request->validated());
+        $product = Product::create($request->all());
 
 //        $request->session()->flash('admin.product.id', $product->id);
 //return $request->all();
-        return redirect()->route('product');
+        return redirect()->route('admin.product.index');
+//
     }
 
 
