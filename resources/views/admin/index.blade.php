@@ -8,6 +8,46 @@
 @stop
 
 @section('content')
+
+<div class="row">
+        <div class="small-box bg-info col m-3 p-0">
+            <div class="inner">
+                <h3>150</h3>
+                <p>New Orders</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+                More info <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+            <div class="small-box bg-gradient-success col m-3 p-0">
+                <div class="inner">
+                    <h3>44</h3>
+                    <p>User Registrations</p>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <a href="#" class="small-box-footer">
+                    More info <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        <div class="small-box bg-danger col m-3 p-0">
+            <div class="inner">
+                <h3>150</h3>
+                <p>New Orders</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+                More info <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+
+</div>
 <div class="row" >
     <div class="card col m-lg-3" style="max-width: 600px">
         <canvas style="max-height: 900px; max-width: 600px" class="" id="myChart"></canvas>
