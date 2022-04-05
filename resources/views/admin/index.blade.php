@@ -69,10 +69,10 @@
         const myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 7, 3],
+                    label: '# total de ventas',
+                    data: [1200, 1900, 300, 500, 700, 300],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
