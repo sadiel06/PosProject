@@ -7,6 +7,15 @@
 @stop
 
 @section('content')
+    @if(session('message'))
+        <div class="alert alert-success">
+            <strong>
+                {{session('message')}}
+            </strong>
+        </div>
+    @endif
+
+
     <div class="card">
         <div class="card-body">
             <div class="form-group">

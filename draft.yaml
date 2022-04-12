@@ -1,9 +1,29 @@
 models:
-  Products/product:
-    name: string:257
-    category: text
-    price: numeric
-    stock: integer
-controllers:
-  product:
-    resource
+  Status:
+    description: string
+
+  CategoryType:
+    description: string
+
+  Category:
+    category_type_id: unsignedBigInteger
+    description: string
+
+  Phone:
+    phonable_id: unsignedBigInteger
+    phonable_type: string
+    number: string
+
+  Client:
+    entity_id: foreign:entities
+    name: string:100
+    apellido: string:100
+    cedula: string:18
+
+  Sales:
+    date_created: date
+    total: double:10,2
+    status_id: integer
+    point_of_sales_id: unsignedBigInteger
+
+

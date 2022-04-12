@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\productStoreRequest;
 use App\Http\Requests\productUpdateRequest;
 use App\Models\Products\Product;
-//use App\Product;
-//use App\product;
 use Illuminate\Http\Request;
 
 class productController extends Controller
@@ -28,13 +26,13 @@ class productController extends Controller
 
     public function store(productStoreRequest $request)
     {
-//        dd($request->all());
+
         $product = Product::create($request->all());
 
 //        $request->session()->flash('admin.product.id', $product->id);
-//return $request->all();
-        return redirect()->route('admin.product.index');
-//
+
+        return redirect()->route('admin.product.edit',$product)->with('message','Registrado correctamente');
+
     }
 
 
@@ -56,7 +54,7 @@ class productController extends Controller
 
         $request->session()->flash('admin.product.id', $product->id);
 
-        return redirect()->route('admin.product.index');
+        return redirect()->route('admin.product.edit',$product)->with('message','Registro correctamente actualizado');
     }
 
 
