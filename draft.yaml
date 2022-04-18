@@ -1,29 +1,87 @@
 models:
+  Size:
+    description: string
+    softDeletes
+
+  Region:
+    description: string
+    softDeletes
+
+  Province:
+    description: string
+    region_id: foreign:regions
+    softDeletes
+
+  Municipality:
+    description: string
+    province_id: foreign:provinces
+    softDeletes
+
+  Address:
+    region_id: foreign:regions
+    province_id: foreing:provinces
+    municipality_id: foreign:municipalities
+    softDeletes
+
   Status:
     description: string
+    softDeletes
 
   CategoryType:
     description: string
+    softDeletes
 
   Category:
     category_type_id: unsignedBigInteger
-    description: string
+    name: string
+    description: text nullable
+    softDeletes
+
+  PointOfSale:
+    name: string
+    user_id: foreign:users
+    address_id: foreign:addresses
+    softDeletes
 
   Phone:
     phonable_id: unsignedBigInteger
     phonable_type: string
-    number: string
+    number_phone: string
+    softDeletes
+
+  Email:
+    emailable_id: unsignedBigInteger
+    emailable_type: string
+    email: string
+    softDeletes
+
 
   Client:
     entity_id: foreign:entities
     name: string:100
     apellido: string:100
     cedula: string:18
+    softDeletes
 
-  Sales:
+  Sale:
     date_created: date
+    user_id: foreign:users
     total: double:10,2
     status_id: integer
-    point_of_sales_id: unsignedBigInteger
+    point_of_sales_id: foreign:point_of_sales
+    client_id: foreign:clients nullable
+    softDeletes
+
+  SalesDetail:
+    date_created: date
+    product_id: foreign:products
+    quantity: integer
+    softDeletes
+
+
+
+
+
+
 
 
