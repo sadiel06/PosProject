@@ -77,11 +77,3 @@ models:
     product_id: foreign:products
     quantity: integer
     softDeletes
-
-
-
-
-
-
-
-
