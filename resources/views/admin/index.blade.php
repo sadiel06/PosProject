@@ -52,20 +52,20 @@
 {{--    <div class="card col m-lg-3" style="max-width: 600px">--}}
 {{--        <canvas style="max-height: 900px; max-width: 600px" class="" id="myChart"></canvas>--}}
 {{--    </div>--}}
-
 {{--    <div class="card col m-lg-3" style="max-width: 600px">--}}
 {{--        <canvas style="max-height: 900px; max-width: 600px" class="" id="yourChart"></canvas>--}}
 {{--    </div>--}}
-
-
 {{--</div>--}}
-<div class="col-5">
-<div class="card card-cyan">
+
+<div class="row">
+    <div class="col-4">
+<div class="card card-dark ">
     <div class="card-header">
         <h3 class="card-title">Ventas semanales</h3>
         <div class="card-tools">
             <!-- Collapse Button -->
-            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+            <button type="button" class="btn btn-tool"  data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+
         </div>
         <!-- /.card-tools -->
     </div>
@@ -76,7 +76,7 @@
     <!-- /.card-body -->
 </div>
 </div>
-<div class="">
+<div class=" col-4">
     <div class="card card-blue">
         <div class="card-header">
             <h3 class="card-title">Productos mas vendidos</h3>
@@ -93,6 +93,25 @@
         <!-- /.card-body -->
     </div>
 </div>
+    <div class="col-4">
+        <div class="card card-blue">
+            <div class="card-header">
+                <h3 class="card-title">Sizes mas demandados</h3>
+                <div class="card-tools">
+                    <!-- Collapse Button -->
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                </div>
+                <!-- /.card-tools -->
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <canvas  class="" id="yourChart"></canvas>
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div>
+</div>
+
 <!-- /.card -->
 @stop
 
