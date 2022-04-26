@@ -53,6 +53,6 @@
 @stop
 
 @section('js')
-    <script src="/js/Charts/prueba.js"> </script>
+
 {{--    <script src="/js/Charts/SalesPredictChart.js"> </script>--}}
 @stop
