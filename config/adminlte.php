@@ -247,9 +247,15 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'products',
+            'text'        => 'Products',
             'route'         => 'admin.product.index',
             'icon'        => 'fas fa-solid fa-cubes',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Clients',
+            'route'         => 'admin.client.index',
+            'icon'        => 'fas fa-fw fa-user',
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],

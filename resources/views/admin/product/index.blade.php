@@ -40,7 +40,6 @@
                                 </form>
                             </td>
                         </tr>
-
                     @endforeach
                 </tbody>
             </table>
@@ -54,5 +53,4 @@
 
 @section('js')
 
-{{--    <script src="/js/Charts/SalesPredictChart.js"> </script>--}}
 @stop
