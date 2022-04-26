@@ -49,9 +49,10 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script src="/js/Charts/prueba.js"> </script>
+{{--    <script src="/js/Charts/SalesPredictChart.js"> </script>--}}
 @stop
