@@ -76,5 +76,5 @@ const yourChart = new Chart(ctx1, {
         }
     }
 });
-yourChart.canvas.parentNode.style.height = 'auto';
-yourChart.canvas.parentNode.style.width = 'auto';
+// yourChart.canvas.parentNode.style.height = 'auto';
+// yourChart.canvas.parentNode.style.width = 'auto';

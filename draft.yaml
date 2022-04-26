@@ -55,7 +55,6 @@ models:
     email: string
     softDeletes
 
-
   Client:
     entity_id: foreign:entities
     name: string:100
