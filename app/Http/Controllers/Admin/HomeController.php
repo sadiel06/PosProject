@@ -11,7 +11,6 @@ class HomeController extends Controller
 {
     public function index(){
         $vals = $this->getClient()->body();
-//        dd($vals);
         return view('admin.index', compact('vals'));
     }
     public function getClient(){

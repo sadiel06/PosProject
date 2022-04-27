@@ -1,16 +1,35 @@
 created:
-    - app/Http/Controllers/productController.php
-    - database/factories/Products/ProductFactory.php
-    - database/migrations/2022_02_27_210029_create_products_table.php
-    - app/Models/Products/product.php
-    - tests/Feature/Http/Controllers/productControllerTest.php
-    - app/Http/Requests/productStoreRequest.php
-    - app/Http/Requests/productUpdateRequest.php
-    - resources/views/product/index.blade.php
-    - resources/views/product/create.blade.php
-    - resources/views/product/show.blade.php
-    - resources/views/product/edit.blade.php
+    - app/Http/Controllers/BrandController.php
+    - database/factories/BrandFactory.php
+    - database/migrations/2022_04_27_103140_create_brands_table.php
+    - app/Models/Brand.php
+    - database/seeders/BrandSeeder.php
+    - tests/Feature/Http/Controllers/BrandControllerTest.php
+    - app/Http/Requests/BrandStoreRequest.php
+    - app/Http/Requests/BrandUpdateRequest.php
+    - resources/views/brand/index.blade.php
+    - resources/views/brand/create.blade.php
+    - resources/views/brand/show.blade.php
+    - resources/views/brand/edit.blade.php
 updated:
     - routes/web.php
 models:
     Products/product: { name: 'string:257', category: text, price: numeric, stock: integer }
+    Size: { description: string, softdeletes: softDeletes }
+    Region: { description: string, softdeletes: softDeletes }
+    Province: { description: string, region_id: 'foreign:regions', softdeletes: softDeletes }
+    Municipality: { description: string, province_id: 'foreign:provinces', softdeletes: softDeletes }
+    Address: { region_id: 'foreign:regions', province_id: 'foreing:provinces', municipality_id: 'foreign:municipalities', softdeletes: softDeletes }
+    Status: { description: string, softdeletes: softDeletes }
+    CategoryType: { description: string, softdeletes: softDeletes }
+    Category: { category_type_id: 'foreign:category_types', name: string, description: 'text nullable', softdeletes: softDeletes }
+    PointOfSale: { name: string, user_id: 'foreign:users', address_id: 'foreign:addresses', softdeletes: softDeletes }
+    Phone: { phonable_id: unsignedBigInteger, phonable_type: string, number_phone: string, softdeletes: softDeletes }
+    Email: { emailable_id: unsignedBigInteger, emailable_type: string, email: string, softdeletes: softDeletes }
+    Client: { entity_id: 'foreign:entities', name: 'string:100', apellido: 'string:100', cedula: 'string:18', softdeletes: softDeletes }
+    Sale: { date_created: date, user_id: 'foreign:users', total: 'double:10,2', status_id: 'foreign:statuses', point_of_sales_id: 'foreign:point_of_sales', client_id: 'foreign:clients nullable', softdeletes: softDeletes }
+    SalesDetail: { sale_id: 'foreign:sales', date_created: date, product_id: 'foreign:products', quantity: integer, softdeletes: softDeletes }
+    Producto: { category_id: 'foreign:categories', name: string, status_id: integer, size_id: 'foreign:sizes nullable', register_date: date, price: 'double:10,2', cost: 'doule:10,2' }
+    Inventory: { date: date, user_id: 'foreign:users', note: text }
+    InventoryDetail: { pruduct_id: 'foreign:products', min_stock: integer, current_stock: integer }
+    Brand: { description: string }
