@@ -183,10 +183,9 @@
     <script src="/js/Charts/ProductsChart.js"> </script>
     <script src="/js/Charts/SizesChart.js"> </script>
     <script >
-        //otro char
-        // otro grafico mas
+        const api = <?php echo json_encode( Illuminate\Support\Facades\Http::get('http://127.0.0.1:5000/clients')->body()); ?>;
+        console.log(api);
 
-        // Chart prediccion
 
     </script>
 @stop
