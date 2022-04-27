@@ -17,7 +17,7 @@ class CreateClientsTable extends Migration
 
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('entity_id')->constrained();
+            $table->unsignedBigInteger('entity_id');
             $table->string('name', 100);
             $table->string('apellido', 100);
             $table->string('cedula', 18);

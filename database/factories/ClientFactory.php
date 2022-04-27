@@ -16,19 +16,15 @@ class ClientFactory extends Factory
      */
     protected $model = Client::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
+
     public function definition()
     {
         return [
-            'entity_id' => Entity::factory(),
+            'entity_id' => $this->faker->randomNumber(50),
             'name' => $this->faker->name,
             'apellido' => $this->faker->regexify('[A-Za-z0-9]{100}'),
             'cedula' => $this->faker->regexify('[A-Za-z0-9]{18}'),
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

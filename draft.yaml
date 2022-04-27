@@ -97,15 +97,15 @@
 #    min_stock: integer
 #    current_stock: integer
 
-models:
-  Brand:
-    description: string
-
-controllers:
-  Brand:
-    resource
-
-seeders: Brand
+#models:
+#  Brand:
+#    description: string
+#
+#controllers:
+#  Brand:
+#    resource
+#
+#seeders: Brand
 
 
 

@@ -10,11 +10,6 @@ class Client extends Model
 {
     use HasFactory, SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'entity_id',
         'name',
@@ -22,11 +17,7 @@ class Client extends Model
         'cedula',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+
     protected $casts = [
         'id' => 'integer',
         'entity_id' => 'integer',
