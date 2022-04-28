@@ -26,7 +26,7 @@ class ProductoFactory extends Factory
     {
         return [
             'category_id' => Category::factory(),
-            'name' => $this->faker->unique()->word(),
+            'name' => $this->faker->word(),
             'status_id' => $this->faker->randomElement([1,2]),
             'size_id' => Size::factory(),
             'register_date' => $this->faker->date(),

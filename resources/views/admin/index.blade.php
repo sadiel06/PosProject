@@ -111,7 +111,7 @@
             <p>Productos con bajo stock</p>
         </div>
         <div class="icon">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-solid fa-cubes"></i>
         </div>
         <a href="#" class="small-box-footer">
             More info <i class="fas fa-arrow-circle-right"></i>
@@ -146,24 +146,24 @@
                     </thead>
 
                     <tbody>
-{{--                    @foreach($products as $product)--}}
-{{--                        <tr>--}}
-{{--                            <td>{{$product->id}}</td>--}}
-{{--                            <td>{{$product->name}}</td>--}}
-{{--                            <td>{{$product->category}}</td>--}}
-{{--                            <td>{{$product->price}}</td>--}}
-{{--                            <td>{{$product->stock}}--}}
-{{--                            <td><a href="{{route('admin.product.edit',$product)}}" class="btn btn-warning btn-sm">Edit</a> </td>--}}
-{{--                            <td>--}}
-{{--                                <form action="{{route('admin.product.destroy',$product)}}" method="POST">--}}
-{{--                                    @method('delete')--}}
-{{--                                    @csrf--}}
-{{--                                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">--}}
-{{--                                </form>--}}
-{{--                            </td>--}}
-{{--                        </tr>--}}
+                    @foreach($products as $product)
+                        <tr>
+                            <td>{{$product->id}}</td>
+                            <td>{{$product->name}}</td>
+                            <td>{{$product->category}}</td>
+                            <td>{{$product->price}}</td>
+                            <td>{{$product->stock}}
+                            <td><a href="{{route('admin.product.edit',$product)}}" class="btn btn-warning btn-sm">Edit</a> </td>
+                            <td>
+                                <form action="{{route('admin.product.destroy',$product)}}" method="POST">
+                                    @method('delete')
+                                    @csrf
+                                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                                </form>
+                            </td>
+                        </tr>
 
-{{--                    @endforeach--}}
+                    @endforeach
                     </tbody>
                 </table>
             </div>
@@ -183,22 +183,22 @@
     <script src="/js/Charts/ProductsChart.js"> </script>
     <script src="/js/Charts/SizesChart.js"> </script>
     <script >
-        const api = <?php echo json_encode( Illuminate\Support\Facades\Http::get('http://127.0.0.1:5000/clients')->body()); ?>;
-        console.log(api);
-
+        let api = <?php echo json_encode( Illuminate\Support\Facades\Http::get('http://127.0.0.1:5000/clients')->body()); ?>;
+        api = JSON.parse(api);
+        console.log(api.totales);
         const ctx3 = document.getElementById('predictChart').getContext('2d');
         const theirChart1 = new Chart(ctx3, {
             type: 'line',
             data: {
                 labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Nobiembre', 'Diciembre'],
                 datasets: [{
-                    label: ['# Prediccion(95%)'],
-                    data: [1200, 1900, 300, 500, 700, 300],
+                    label: ['# Prediccion(90.1%)'],
+                    data:[373636.66, 380042.73, 306457.52, 275514.02,308310.45],
                     backgroundColor:'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',
                 },{
                     label: '# Ventas por mes',
-                    data: [1500, 1300, 200, 600, 900],
+                    data: api.totales.slice(api.totales.length-4),
                     backgroundColor:'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)',
                 }]

@@ -31,7 +31,7 @@ class SalesDetailFactory extends Factory
             'sale_id' => Sale::factory(),
             'date_created' => $this->faker->date(),
             'producto_id' => $val,
-            'producto_price' => Producto::find( $this->faker->numberBetween(0, Producto::all()->count()))->price,
+            'producto_price' => $this->faker->randomFloat(2, 1550, 6666.99),
             'quantity' => $this->faker->numberBetween(0, 5),
 //            'softdeletes' => $this->faker->word,
         ];

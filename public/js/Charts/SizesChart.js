@@ -3,10 +3,10 @@ const ctx2 = document.getElementById('sizeChart').getContext('2d');
 const theirChart = new Chart(ctx2, {
     type: 'pie',
     data: {
-        labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+        labels: ['XS','2X','L','2XL','M','S'],
         datasets: [{
             label: '# total de ventas',
-            data: [1200, 1900, 300, 500, 700, 300],
+            data: [24, 38, 6, 10, 14, 6],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',

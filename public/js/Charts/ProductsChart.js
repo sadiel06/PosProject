@@ -2,10 +2,10 @@ const ctx1 = document.getElementById('productChart').getContext('2d');
 const yourChart = new Chart(ctx1, {
     type: 'doughnut',
     data: {
-        labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+        labels: ['Pantalon clx', 'Poloshirt fox', 'reloj stole', 'interior', 'manga larga polo', 'bufanda'],
         datasets: [{
             label: '# total de ventas',
-            data: [1200, 1900, 300, 500, 700, 300],
+            data: [12000, 8000, 3000, 4000, 7000, 3000],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
