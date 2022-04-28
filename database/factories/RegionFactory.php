@@ -24,7 +24,7 @@ class RegionFactory extends Factory
     {
         return [
             'description' => $this->faker->text,
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

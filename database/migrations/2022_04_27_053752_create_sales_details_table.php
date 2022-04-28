@@ -19,7 +19,8 @@ class CreateSalesDetailsTable extends Migration
             $table->id();
             $table->foreignId('sale_id')->constrained();
             $table->date('date_created');
-            $table->foreignId('product_id')->constrained();
+            $table->foreignId('producto_id')->constrained();
+            $table->decimal('producto_price',12,2)->nullable();
             $table->integer('quantity');
             $table->softDeletes();
             $table->timestamps();

@@ -19,7 +19,7 @@ class CreateSalesTable extends Migration
             $table->id();
             $table->date('date_created');
             $table->foreignId('user_id')->constrained();
-            $table->double('total', 10, 2);
+            $table->double('total', 10, 2)->nullable();
             $table->foreignId('status_id')->constrained();
             $table->foreignId('point_of_sales_id')->constrained('point_of_sales');
             $table->foreignId('client_id')->nullable()->constrained();

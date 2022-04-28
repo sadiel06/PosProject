@@ -10,28 +10,20 @@ class SalesDetail extends Model
 {
     use HasFactory, SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'sale_id',
         'date_created',
-        'product_id',
+        'producto_id',
+        'producto_price',
         'quantity',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+
     protected $casts = [
         'id' => 'integer',
-        'sale_id' => 'integer',
+        'sales_id' => 'integer',
         'date_created' => 'date',
-        'product_id' => 'integer',
+        'producto_id' => 'integer',
     ];
 
     public function sale()
@@ -39,8 +31,5 @@ class SalesDetail extends Model
         return $this->belongsTo(Sale::class);
     }
 
-    public function product()
-    {
-        return $this->belongsTo(Product::class);
-    }
+
 }

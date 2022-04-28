@@ -27,13 +27,13 @@ class SaleFactory extends Factory
     public function definition()
     {
         return [
-            'date_created' => $this->faker->date(),
+            'date_created' => $this->faker->dateTimeBetween('-3 years',  'now', $timezone = null),
             'user_id' => User::factory(),
-            'total' => $this->faker->randomFloat(2, 0, 99999999.99),
+//            'total' => $this->faker->randomFloat(2, 0, 99999999.99),
             'status_id' => Status::factory(),
             'point_of_sales_id' => PointOfSale::factory(),
             'client_id' => Client::factory(),
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

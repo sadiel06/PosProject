@@ -28,7 +28,7 @@ class PointOfSaleFactory extends Factory
             'name' => $this->faker->name,
             'user_id' => User::factory(),
             'address_id' => Address::factory(),
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

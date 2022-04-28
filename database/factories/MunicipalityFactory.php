@@ -26,7 +26,7 @@ class MunicipalityFactory extends Factory
         return [
             'description' => $this->faker->text,
             'province_id' => Province::factory(),
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

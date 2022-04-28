@@ -30,8 +30,8 @@ class ProductoFactory extends Factory
             'status_id' => $this->faker->randomElement([1,2]),
             'size_id' => Size::factory(),
             'register_date' => $this->faker->date(),
-            'cost' => $this->faker->randomFloat(2, 600, 9999.99),
-            'price' => $this->faker->randomFloat(2, 'cost', 9999.99),
+            'cost' => $this->faker->randomFloat(2, 600, 1300),
+            'price' => $this->faker->randomFloat(2, 1550, 9999.99),
         ];
     }
 }

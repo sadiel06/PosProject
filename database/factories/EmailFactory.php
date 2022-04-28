@@ -26,7 +26,7 @@ class EmailFactory extends Factory
             'emailable_id' => $this->faker->randomNumber(),
             'emailable_type' => $this->faker->word,
             'email' => $this->faker->safeEmail,
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

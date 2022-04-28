@@ -24,9 +24,10 @@ class InventoryDetailFactory extends Factory
     public function definition()
     {
         return [
+
             'pruduct_id' => Product::factory(),
-            'min_stock' => $this->faker->numberBetween(-10000, 10000),
-            'current_stock' => $this->faker->numberBetween(-10000, 10000),
+            'min_stock' => $this->faker->numberBetween(15, 25),
+            'current_stock' => $this->faker->numberBetween(20, 55),
         ];
     }
 }

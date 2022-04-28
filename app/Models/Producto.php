@@ -46,4 +46,5 @@ class Producto extends Model
     {
         return $this->belongsTo(Size::class);
     }
+
 }

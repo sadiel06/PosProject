@@ -15,7 +15,7 @@ class SizeFactory extends Factory
     {
         $sizes=['XS','2X','L','2XL','3XL','M','S','XL'];
         return [
-            'description' => $this->faker->unique()->randomElement($sizes),
+            'description' => $this->faker->randomElement($sizes),
 //            'softdeletes' => $this->faker->word,
         ];
     }
