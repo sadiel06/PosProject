@@ -20,7 +20,7 @@ class ClientFactory extends Factory
     public function definition()
     {
         return [
-            'entity_id' => $this->faker->randomNumber(50),
+            'entity_id' => $this->faker->randomNumber(),
             'name' => $this->faker->name,
             'apellido' => $this->faker->regexify('[A-Za-z0-9]{100}'),
             'cedula' => $this->faker->regexify('[A-Za-z0-9]{18}'),

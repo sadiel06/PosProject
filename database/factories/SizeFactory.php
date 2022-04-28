@@ -8,23 +8,15 @@ use App\Models\Size;
 
 class SizeFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
+
     protected $model = Size::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
     public function definition()
     {
+        $sizes=['XS','2X','L','2XL','3XL','M','S','XL'];
         return [
-            'description' => $this->faker->text,
-            'softdeletes' => $this->faker->word,
+            'description' => $this->faker->unique()->randomElement($sizes),
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

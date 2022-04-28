@@ -7,13 +7,16 @@ use Illuminate\Database\Seeder;
 
 class StatusSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
     public function run()
     {
-        Status::factory()->count(5)->create();
+//        Status::factory()->count(2)->create();
+        $status =new Status();
+        $status->description='activo';
+        $status->save();
+        $status1 =new Status();
+        $status1->description='inactivo';
+        $status1->save();
+
     }
 }

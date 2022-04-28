@@ -14,7 +14,6 @@ class CreateProductosTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
-
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained();
@@ -23,7 +22,7 @@ class CreateProductosTable extends Migration
             $table->foreignId('size_id')->nullable()->constrained();
             $table->date('register_date');
             $table->double('price', 10, 2);
-            $table->string('cost');
+            $table->double('cost', 10, 2);
             $table->timestamps();
         });
 

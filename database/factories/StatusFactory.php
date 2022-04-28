@@ -23,8 +23,8 @@ class StatusFactory extends Factory
     public function definition()
     {
         return [
-            'description' => $this->faker->text,
-            'softdeletes' => $this->faker->word,
+            'description' => $this->faker->name('Active|inactive'),
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

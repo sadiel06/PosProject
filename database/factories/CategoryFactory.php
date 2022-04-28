@@ -27,7 +27,7 @@ class CategoryFactory extends Factory
             'category_type_id' => CategoryType::factory(),
             'name' => $this->faker->name,
             'description' => $this->faker->text,
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

@@ -26,7 +26,7 @@ class PhoneFactory extends Factory
             'phonable_id' => $this->faker->randomNumber(),
             'phonable_type' => $this->faker->word,
             'number_phone' => $this->faker->word,
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }

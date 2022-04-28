@@ -28,7 +28,7 @@ class AddressFactory extends Factory
             'region_id' => Region::factory(),
             'province_id' => $this->faker->word,
             'municipality_id' => Municipality::factory(),
-            'softdeletes' => $this->faker->word,
+//            'softdeletes' => $this->faker->word,
         ];
     }
 }
